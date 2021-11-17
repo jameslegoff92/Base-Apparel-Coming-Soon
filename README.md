@@ -8,8 +8,8 @@
 
 ### Links
 
-- Solution URL: https://github.com/jameslegoff92/four-card-feature
-- Live Site URL: https://jameslegoff92.github.io/four-card-feature/
+- Solution URL: https://github.com/jameslegoff92/jameslegoff92.github.io
+- Live Site URL: https://jameslegoff92.github.io/
 
 ## My process
 

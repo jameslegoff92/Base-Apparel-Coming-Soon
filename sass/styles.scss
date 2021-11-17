@@ -1,0 +1,249 @@
+@import 'mixins';
+@import 'variables';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*, * ::before, * ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-image: linear-gradient(135deg, hsl(0,0%, 100%), hsl(0, 100%, 98%));
+  font-family: 'Josefin Sans', sans-serif;
+  min-height: 100vh;
+  width: 100vw;
+}
+//  Mobile Styling
+.container {
+  margin: 0 auto;
+  max-width: 600px;
+  width: 100%;
+  
+}
+
+.logo-container {
+  padding: 1.5625rem 5.3333333%;
+}
+
+.picture-container {
+  width: 100%;
+
+  .picture-container__picture {
+    width: 100%;
+  }
+}
+
+.title-container {
+  font-size: 1.6rem;
+  letter-spacing: 12.5px;
+  line-height: 1.1;
+  margin: 3.8125rem auto 0.625rem;
+  opacity: 90%;
+  text-align: center;
+  text-transform: uppercase;
+  width: 85%;
+
+  .title-container__title--secondary {
+    color: $desaturated-red;
+    font-weight: 200;
+  }
+}
+
+.text-container {
+  line-height: 1.4;
+  margin: 0 auto 2.5rem;
+  text-align: center;
+  width: 85%;
+
+  .text-container__text {
+    color: $desaturated-red;
+    font-size: 0.9rem;
+    font-weight: 400;
+    opacity: 75%;
+  }
+}
+
+.form-container {
+  margin: 0 auto;
+  position: relative;
+  width: 83%;
+
+  .form {
+    width: 100%;
+
+    .form__input {
+      background-color: transparent;
+      border-radius: 1.875rem;
+      border: rgb(206, 151,151, 0.5) solid 1px;
+      padding: 0.9375rem 1.25rem;
+      width:100%;
+    }
+    .form__input::placeholder {
+      color: $desaturated-red;
+      opacity: 40%;
+    }
+
+    .form__input:focus {
+      outline: 1px solid red;
+    }
+
+    .form__error-icon--off {
+      @include error-icon-mobile;
+      display: none;
+    }
+
+    .form__error-icon--on {
+      @include error-icon-mobile;
+      display: inline;
+    }
+  
+    .form__btn {
+      background-color: #F19D9D;
+      border: none;
+      border-radius: 30px;
+      box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+      position: absolute;
+      top: -2px;
+      right: -2px;
+      height: 3.2rem;
+      width: 4.375rem;
+
+      .form__icon {
+        position: relative;
+        top: 0;
+        bottom: 0;
+      }
+    }
+    .form__btn:hover {
+      cursor: pointer;
+      opacity: 80%;
+    }
+  }
+}
+
+.msg-off {
+  display: none;
+}
+.msg-on--error {
+  @include msg-styling-mobile;
+  color: red;
+}
+.msg-on--success {
+  @include msg-styling-mobile;
+  color: lightskyblue;
+}
+
+// Desktop Styling
+@media only screen and (min-width: 1200px) {
+  body {
+    background-image: url(../images/bg-pattern-desktop.svg),linear-gradient(135deg, hsl(0,0%, 100%), hsl(0, 100%, 98%));
+    background-repeat: no-repeat;
+    background-size: 61.2491446% 100vh;
+  }
+
+  .container {
+    height: 100vh;
+    max-width: 100%;
+    padding-left: 13.8888889%; // 200px / 1440px
+  }
+  
+  .logo-container {
+    display: block;
+    float: left;
+    margin-top: 30px;
+    margin-bottom: 110px;
+    padding: 25px 0;
+    width: 55%;
+  }
+
+  .picture-container {
+    float: right;
+    height: 100%;
+    width: 45%; 
+
+    .picture-container__picture {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  
+  .title-container {
+    font-size: 2.5rem;
+    letter-spacing: 15px;
+    line-height: 1.2;
+    margin: 0 0 30px 0;
+    overflow: hidden; //Stops the container's content area for reaching the top of viewport.
+    text-align: left;
+    width: 40%;
+  }
+  
+  .text-container {
+    line-height: 1.6;
+    margin: 0 0 55px 0;
+    text-align: left;
+    width: 40%;
+
+    .text-container__text {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .form-container {
+    display: inline-block;
+    width: 40%;
+
+    .form {
+
+      .form__input {
+        height: 3.75rem;
+      }
+  
+      .form__btn {
+        border: none;
+        border-radius: 30px;
+        box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+        position: absolute;
+        top: -0.125rem;
+        right: -0.125rem;
+        height: 4rem;
+        width: 6.25rem;
+  
+        .form__icon {
+          position: relative;
+          top: 0;
+          bottom: 0;
+        }
+      }
+  
+      .form__error-icon--off {
+        @include error-icon-desktop;
+        display: none;
+      }
+  
+      .form__error-icon--on {
+        @include error-icon-desktop;
+        display: inline;
+      }
+    }
+  } 
+
+  .msg-off {
+    display: none;
+  }
+
+  .msg-on--error {
+    @include msg-styling-desktop;
+    color: red;
+  }
+  .msg-on--success {
+    @include msg-styling-desktop;
+    color: lightskyblue;
+  }
+}
+

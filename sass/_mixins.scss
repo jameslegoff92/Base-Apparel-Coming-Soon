@@ -1,0 +1,27 @@
+@mixin error-icon-mobile {
+  position: absolute;
+  top: 0.7188rem;
+  right: 5.625rem;
+}
+
+@mixin error-icon-desktop {
+  position: absolute;
+  top: 1.125rem;
+  right: 7.5rem;
+}
+
+@mixin msg-styling-mobile{
+  position: relative;
+  font-size: 0.6rem;
+  font-weight: 200;
+  margin: 5px auto;
+  width: 75%;    
+}
+
+@mixin msg-styling-desktop {
+  font-size: 0.8rem;
+  font-weight: 200;
+  margin: 0.625rem;
+  width: 40%;    
+} 
+

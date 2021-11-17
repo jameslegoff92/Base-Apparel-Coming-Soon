@@ -1,0 +1,15 @@
+{
+  "name": "base-apparel-coming-soon-master",
+  "version": "1.0.0",
+  "description": "- [Screenshot](#screenshot)   - [Links](#links) - [My process](#my-process)   - [Built with](#built-with)   - [What I learned](#what-i-learned)   - [Continued development](#continued-development)   - [Useful resources](#useful-resources) - [Author](#author) - [Acknowledgments](#acknowledgments)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.43.4"
+  }
+}
